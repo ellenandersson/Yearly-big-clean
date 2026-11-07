@@ -28,7 +28,9 @@ function Elevation({ wall, onToggle }) {
               <div className="upper-slot">
                 {column.upper ? <CabinetButton item={column.upper} onToggle={onToggle} /> : null}
               </div>
-              <div className={`counter${column.counter ? ' marked' : ''}`}>{column.counter || ''}</div>
+              {column.divider !== false ? (
+                <div className={`counter${column.counter ? ' marked' : ''}`}>{column.counter || ''}</div>
+              ) : null}
               <div className="lower-slot">
                 {column.lower?.fixed ? (
                   <div className="fixture">{column.lower.label}</div>

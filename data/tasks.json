@@ -23,7 +23,7 @@
         },
         {
           "id": "fridge",
-          "label": "Töm och tvätta kylskåpet",
+          "label": "Töm och torka ur kylskåp",
           "done": false
         },
         {
@@ -76,7 +76,7 @@
             "columns": [
               {
                 "id": "bottle",
-                "span": 0.5,
+                "span": 0.1,
                 "lower": {
                   "id": "bottle-cupboard",
                   "label": "Flaskor",
@@ -107,6 +107,7 @@
               },
               {
                 "id": "fridge",
+                "divider": false,
                 "upper": {
                   "id": "fridge",
                   "label": "Kylskåp",
@@ -120,6 +121,7 @@
               },
               {
                 "id": "pantry",
+                "divider": false,
                 "upper": {
                   "id": "pantry",
                   "label": "Skafferi",
@@ -142,6 +144,7 @@
               },
               {
                 "id": "broom",
+                "divider": false,
                 "upper": {
                   "id": "microwave",
                   "label": "Övre hylla",
@@ -164,7 +167,7 @@
                 "id": "corner",
                 "upper": {
                   "id": "corner-upper",
-                  "label": "Corner upper",
+                  "label": "Skåp",
                   "done": false
                 },
                 "lower": {
@@ -243,7 +246,7 @@
                 "span": 1.2,
                 "upper": {
                   "id": "over-sink",
-                  "label": "Över tvättställ",
+                  "label": "Glasskåp",
                   "done": false
                 },
                 "lower": {

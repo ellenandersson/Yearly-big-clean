@@ -238,9 +238,16 @@ input {
 
 .l-shape {
   display: grid;
-  grid-template-columns: minmax(180px, 230px) 36px minmax(0, 1fr);
+  grid-template-columns: minmax(180px, 1fr);
+  grid-template-rows: minmax(0, 1fr) 36px minmax(0, 1fr);
   gap: 8px;
   margin-top: 18px;
+  align-items: stretch;
+}
+
+.run {
+  display: flex;
+  flex-direction: column;
 }
 
 .run h3 {
@@ -409,9 +416,10 @@ input {
 
 .corner-joint {
   display: flex;
-  flex-direction: column;
-  align-self: end;
-  height: 332px;
+  flex-direction: row;
+  align-self: center;
+  width: min(100%, 220px);
+  min-height: 36px;
   border-radius: 8px;
   background: #efe6d4;
 }
