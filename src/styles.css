@@ -1,0 +1,479 @@
+:root {
+  color-scheme: light;
+  --paper: #f3efe4;
+  --paper-deep: #e7e0d0;
+  --ink: #241f1a;
+  --muted: #6d6458;
+  --line: #ddd4c4;
+  --card: #fffaf2;
+  --moss: #2f5d40;
+  --moss-deep: #1e3d2b;
+  --moss-soft: #dce8dc;
+  --door: #f6f0e3;
+  --door-edge: #c9b89a;
+  --brass: #9a7436;
+  --shadow: 0 16px 40px rgba(60, 42, 20, 0.08);
+  font-family: Outfit, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 32%),
+    var(--paper);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 64px;
+}
+
+.topbar,
+.section-heading,
+.top-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.topbar h1,
+.room-panel h2,
+.plan h2 {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 560;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.topbar h1 {
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 0.95;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--moss);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.top-actions {
+  align-items: center;
+  padding-bottom: 6px;
+}
+
+.save {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.save-error {
+  color: #8d2f24;
+}
+
+.text-button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.text-button:hover,
+.room:hover,
+.cabinet:hover {
+  border-color: var(--moss);
+}
+
+.progress-block {
+  margin: 22px 0 28px;
+}
+
+.progress-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--paper-deep);
+  overflow: hidden;
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  background: var(--moss);
+}
+
+.progress-block p,
+.section-heading p,
+.plan-note {
+  color: var(--muted);
+}
+
+.progress-block p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.rooms {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 16px;
+}
+
+.room {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 14px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.room.active {
+  background: var(--card);
+  border-color: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.count,
+.fraction {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+}
+
+.fraction {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.room-panel,
+.plan {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.room-panel {
+  padding: 28px;
+}
+
+.room-panel h2,
+.plan h2 {
+  font-size: 32px;
+}
+
+.section-heading p {
+  margin: 6px 0 0;
+}
+
+.tasks {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.task input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--moss);
+  flex: none;
+}
+
+.task.done span {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.plan {
+  margin-top: 28px;
+  padding: 22px;
+  background:
+    linear-gradient(180deg, rgba(220, 232, 220, 0.45), transparent 90px),
+    #fbf7ef;
+}
+
+.l-shape {
+  display: grid;
+  grid-template-columns: minmax(180px, 230px) 36px minmax(0, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.run h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.main-run {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.elevation {
+  display: flex;
+  gap: 6px;
+  min-height: 332px;
+}
+
+.main-run .elevation {
+  min-width: 760px;
+}
+
+.bay {
+  display: flex;
+  flex-direction: column;
+  min-width: 96px;
+  flex-basis: 0;
+}
+
+.tall,
+.upper-slot,
+.lower-slot,
+.drawers {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 0;
+}
+
+.tall {
+  flex: 1;
+}
+
+.upper-slot {
+  flex: 1.05;
+}
+
+.lower-slot {
+  flex: 1.4;
+}
+
+.counter {
+  height: 22px;
+  margin: 4px 0;
+  border-radius: 3px;
+  background: #d9c7a6;
+  color: transparent;
+  flex: none;
+}
+
+.counter.marked {
+  color: var(--moss-deep);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+}
+
+.cabinet,
+.fixture {
+  position: relative;
+  flex: 1;
+  min-height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--door-edge);
+}
+
+.cabinet {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), transparent 42%),
+    var(--door);
+  color: var(--ink);
+  padding: 18px 8px 8px;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: inset 0 0 0 4px rgba(255, 250, 242, 0.7);
+}
+
+.cabinet:focus-visible,
+.room:focus-visible,
+.text-button:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 2px;
+}
+
+.cabinet.done {
+  background: var(--moss);
+  border-color: var(--moss-deep);
+  color: white;
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.16);
+}
+
+.knob {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--brass);
+}
+
+.cabinet.drawer {
+  text-align: center;
+  padding: 14px 4px 4px;
+}
+
+.cabinet.drawer .knob {
+  right: auto;
+  left: 50%;
+  top: 6px;
+  width: 18px;
+  height: 4px;
+  border-radius: 99px;
+  transform: translateX(-50%);
+}
+
+.cabinet.done .knob {
+  background: #f2e2bf;
+}
+
+.cabinet-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 550;
+}
+
+.cabinet.drawer .cabinet-label {
+  max-width: none;
+}
+
+.fixture {
+  display: grid;
+  place-items: center;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #ece7df,
+      #ece7df 10px,
+      #e4ddd2 10px,
+      #e4ddd2 12px
+    );
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.corner-joint {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  height: 332px;
+  border-radius: 8px;
+  background: #efe6d4;
+}
+
+.corner-joint .counter {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.plan-note {
+  margin: 14px 0 0;
+  font-size: 13px;
+}
+
+.plan-note code {
+  font-size: 12px;
+}
+
+.error-shell {
+  width: min(640px, calc(100% - 32px));
+  margin: 12vh auto;
+}
+
+@media (max-width: 860px) {
+  .layout,
+  .l-shape,
+  .topbar,
+  .section-heading {
+    display: block;
+  }
+
+  .rooms {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+  }
+
+  .room {
+    width: auto;
+    white-space: nowrap;
+    background: var(--card);
+  }
+
+  .top-actions {
+    margin-top: 14px;
+  }
+
+  .fraction {
+    margin-top: 8px;
+  }
+
+  .l-shape .main-run {
+    margin-top: 16px;
+  }
+
+  .corner-joint {
+    display: none;
+  }
+
+  .elevation {
+    min-width: 640px;
+  }
+}

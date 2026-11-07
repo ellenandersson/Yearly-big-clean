@@ -1,0 +1,579 @@
+{
+  "title": "Yearly big clean",
+  "year": 2026,
+  "rooms": [
+    {
+      "id": "kitchen",
+      "name": "Kök",
+      "tasks": [
+        {
+          "id": "hood",
+          "label": "Rensa spisen och utblåsningsskåpet",
+          "done": false
+        },
+        {
+          "id": "oven",
+          "label": "Rensa ugnen, och plåtar",
+          "done": false
+        },
+        {
+          "id": "behind",
+          "label": "Rensa bakom spis",
+          "done": false
+        },
+        {
+          "id": "fridge",
+          "label": "Töm och tvätta kylskåpet",
+          "done": false
+        },
+        {
+          "id": "lamps",
+          "label": "Tvätta lampor",
+          "done": false
+        },
+        {
+          "id": "furniture",
+          "label": "Torka av möbler, samt dammsug tyg",
+          "done": false
+        },
+        {
+          "id": "window",
+          "label": "Tvätta fönsterkarm och fönsterbräda",
+          "done": false
+        },
+        {
+          "id": "doors",
+          "label": "Torka dörrkarmar",
+          "done": false
+        },
+        {
+          "id": "curtains",
+          "label": "Tvätta gardiner",
+          "done": false
+        },
+        {
+          "id": "skirting-boards",
+          "label": "Torka av lister",
+          "done": false
+        },
+        {
+          "id": "elements",
+          "label": "Torka av element",
+          "done": false
+        },
+        {
+          "id": "floor",
+          "label": "Dammsuga, torka golvet",
+          "done": false
+        }
+      ],
+      "cabinetPlan": {
+        "walls": [
+          {
+            "id": "left",
+            "name": "Vänster vägg",
+            "role": "return",
+            "columns": [
+              {
+                "id": "bottle",
+                "span": 0.5,
+                "lower": {
+                  "id": "bottle-cupboard",
+                  "label": "Flaskor",
+                  "done": false
+                }
+              },
+              {
+                "id": "snack-drawers",
+                "lower": {
+                  "drawers": [
+                    {
+                      "id": "snack-drawer-top",
+                      "label": "Översta lådan",
+                      "done": false
+                    },
+                    {
+                      "id": "snack-drawer-mid",
+                      "label": "Mellanlådan",
+                      "done": false
+                    },
+                    {
+                      "id": "snack-drawer-bot",
+                      "label": "Nedersta lådan",
+                      "done": false
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "fridge",
+                "upper": {
+                  "id": "fridge",
+                  "label": "Kylskåp",
+                  "done": false
+                },
+                "lower": {
+                  "id": "fridge-lower",
+                  "label": "Frys",
+                  "done": false
+                }
+              },
+              {
+                "id": "pantry",
+                "upper": {
+                  "id": "pantry",
+                  "label": "Skafferi",
+                  "done": false
+                },
+                "lower": {
+                  "drawers": [
+                    {
+                      "id": "pantry-drawer-top",
+                      "label": "Översta lådan",
+                      "done": false
+                    },
+                    {
+                      "id": "pantry-drawer-bot",
+                      "label": "Nedersta lådan",
+                      "done": false
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "broom",
+                "upper": {
+                  "id": "microwave",
+                  "label": "Övre hylla",
+                  "done": false
+                },
+                "lower": {
+                  "id": "broom-shelf",
+                  "label": "Städskrubb",
+                  "done": false
+                }
+              }
+            ]
+          },
+          {
+            "id": "right",
+            "name": "Höger vägg",
+            "role": "right",
+            "columns": [
+              {
+                "id": "corner",
+                "upper": {
+                  "id": "corner-upper",
+                  "label": "Corner upper",
+                  "done": false
+                },
+                "lower": {
+                  "drawers": [
+                    {
+                      "id": "corner-lower-drawer-top-most",
+                      "label": "Översta lådan",
+                      "done": false
+                    },
+                    {
+                      "id": "corner-lower-drawer-top",
+                      "label": "Näst översta lådan",
+                      "done": false
+                    },
+                    {
+                      "id": "corner-lower-drawer-mid",
+                      "label": "Mellanlådan",
+                      "done": false
+                    },
+                    {
+                      "id": "corner-lower-drawer-bot",
+                      "label": "Nedersta lådan",
+                      "done": false
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "hob",
+                "upper": {
+                  "id": "hob-above",
+                  "label": "Ovanför spis",
+                  "done": false
+                },
+                "lower": {
+                  "id": "hob-below",
+                  "label": "Spis",
+                  "done": false
+                }
+              },
+              {
+                "id": "drawers",
+                "upper": {
+                  "id": "drawers-above",
+                  "label": "Tallriksskåp",
+                  "done": false
+                },
+                "lower": {
+                  "drawers": [
+                    {
+                      "id": "drawers-lower-drawer-top-most",
+                      "label": "Översta lådan",
+                      "done": false
+                    },
+                    {
+                      "id": "drawers-lower-drawer-top",
+                      "label": "Näst översta lådan",
+                      "done": false
+                    },
+                    {
+                      "id": "drawers-lower-drawer-mid",
+                      "label": "Mellanlådan",
+                      "done": false
+                    },
+                    {
+                      "id": "drawers-lower-drawer-bot",
+                      "label": "Nedersta lådan",
+                      "done": false
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "sink",
+                "counter": "Sink",
+                "span": 1.2,
+                "upper": {
+                  "id": "over-sink",
+                  "label": "Över tvättställ",
+                  "done": false
+                },
+                "lower": {
+                  "id": "under-sink",
+                  "label": "Under tvättställ",
+                  "done": false
+                }
+              },
+              {
+                "id": "right",
+                "upper": {
+                  "id": "upper-right",
+                  "label": "Upper right",
+                  "done": false
+                },
+                "lower": {
+                  "id": "lower-right",
+                  "label": "Diskmaskin",
+                  "done": false
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "livingroom",
+      "name": "Vardagsrum",
+      "tasks": [
+        {
+          "id": "tv-furniture",
+          "label": "Dammsug och torka ur tv-möbel",
+          "done": false
+        },
+        {
+          "id": "string-shelf",
+          "label": "Torka av hylla",
+          "done": false
+        },
+        {
+          "id": "behind-sofa",
+          "label": "Torka av hylla bakom soffa",
+          "done": false
+        },
+        {
+          "id": "sofa",
+          "label": "Dammsug soffa",
+          "done": false
+        },
+        {
+          "id": "armchair",
+          "label": "Dammsug fåtölj",
+          "done": false
+        },
+        {
+          "id": "pillows",
+          "label": "Tvätta kuddfodral",
+          "done": false
+        },
+        {
+          "id": "media",
+          "label": "Torka av/blås media enheter",
+          "done": false
+        },
+        {
+          "id": "windows",
+          "label": "Tvätta fönsterkarm och fönsterbräda",
+          "done": false
+        },
+        {
+          "id": "curtains",
+          "label": "Tvätta gardiner",
+          "done": false
+        },
+        {
+          "id": "doors",
+          "label": "Torka dörrkarmar och dörr",
+          "done": false
+        },
+        {
+          "id": "skirting-boards",
+          "label": "Torka av lister",
+          "done": false
+        },
+        {
+          "id": "elements",
+          "label": "Torka av element",
+          "done": false
+        },
+        {
+          "id": "floor",
+          "label": "Dammsug och torka golv",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "bedroom",
+      "name": "Sovrum",
+      "tasks": [
+        {
+          "id": "drawers",
+          "label": "Torka ur byrå, och ovanpå",
+          "done": false
+        },
+        {
+          "id": "sidetable",
+          "label": "Torka ur nattygsbord, och ovanpå",
+          "done": false
+        },
+        {
+          "id": "lamp",
+          "label": "Dammsug lampa",
+          "done": false
+        },
+        {
+          "id": "wardrobe",
+          "label": "Dammsug och torka ur garderober",
+          "done": false
+        },
+        {
+          "id": "windows",
+          "label": "Tvätta fönsterkarm och fönsterbräda",
+          "done": false
+        },
+        {
+          "id": "curtains",
+          "label": "Tvätta gardiner",
+          "done": false
+        },
+        {
+          "id": "doors",
+          "label": "Torka dörrkarmar och dörr",
+          "done": false
+        },
+        {
+          "id": "skirting-boards",
+          "label": "Torka av lister",
+          "done": false
+        },
+        {
+          "id": "elements",
+          "label": "Torka av element",
+          "done": false
+        },
+        {
+          "id": "floor",
+          "label": "Dammsug och torka golv",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "office",
+      "name": "Kontor",
+      "tasks": [
+        {
+          "id": "computers",
+          "label": "Blås datorer, och tangentbord etc",
+          "done": false
+        },
+        {
+          "id": "desks",
+          "label": "Torka av skrivbord",
+          "done": false
+        },
+        {
+          "id": "wall-shelf",
+          "label": "Torka ur hobby hylla",
+          "done": false
+        },
+        {
+          "id": "ellens-shelf",
+          "label": "Torka ur Ellens hylla",
+          "done": false
+        },
+        {
+          "id": "alex-shelf",
+          "label": "Torka ur Alex hylla",
+          "done": false
+        },
+        {
+          "id": "drawers",
+          "label": "Torka ur byrån",
+          "done": false
+        },
+        {
+          "id": "window",
+          "label": "Torka fönsterkarm och fönsterbräde",
+          "done": false
+        },
+        {
+          "id": "wardrobe",
+          "label": "Torka ur garderober",
+          "done": false
+        },
+        {
+          "id": "lamps",
+          "label": "Torka av lampor",
+          "done": false
+        },
+        {
+          "id": "doors",
+          "label": "Torka dörrkarmar och dörr",
+          "done": false
+        },
+        {
+          "id": "skirting-boards",
+          "label": "Torka av lister",
+          "done": false
+        },
+        {
+          "id": "elements",
+          "label": "Torka av element",
+          "done": false
+        },
+        {
+          "id": "floor",
+          "label": "Dammsug och torka golv",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "hallway",
+      "name": "Hallway",
+      "tasks": [
+        {
+          "id": "mirror",
+          "label": "Gör rent spegel",
+          "done": false
+        },
+        {
+          "id": "lamp",
+          "label": "Diska lampa",
+          "done": false
+        },
+        {
+          "id": "shelf",
+          "label": "Torka av hyllor",
+          "done": false
+        },
+        {
+          "id": "wardrobes",
+          "label": "Torka ur garderober",
+          "done": false
+        },
+        {
+          "id": "coat-hanger",
+          "label": "Torka av klädhängare, och hyllor",
+          "done": false
+        },
+        {
+          "id": "shoe-shelf",
+          "label": "Torka av skohylla",
+          "done": false
+        },
+        {
+          "id": "skirting-boards",
+          "label": "Torka av lister",
+          "done": false
+        },
+        {
+          "id": "floor",
+          "label": "Dammsug och torka golv",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "bathroom",
+      "name": "Badrum",
+      "tasks": [
+        {
+          "id": "shower",
+          "label": "Gör rent dusch",
+          "done": false
+        },
+        {
+          "id": "shelf",
+          "label": "Gör rent spegelskåp",
+          "done": false
+        },
+        {
+          "id": "toilet",
+          "label": "Gör rent toalett",
+          "done": false
+        },
+        {
+          "id": "basin",
+          "label": "Städa ur tvättställ, och skåp",
+          "done": false
+        },
+        {
+          "id": "laundry",
+          "label": "Tvätta matta",
+          "done": false
+        },
+        {
+          "id": "washing-machine",
+          "label": "Gör ren tvättmaskin",
+          "done": false
+        },
+        {
+          "id": "misc",
+          "label": "Torka av rör och liknande för damm",
+          "done": false
+        },
+        {
+          "id": "doors",
+          "label": "Torka dörrkarmar och dörr",
+          "done": false
+        },
+        {
+          "id": "skirting-boards",
+          "label": "Torka av lister",
+          "done": false
+        },
+        {
+          "id": "elements",
+          "label": "Torka av element",
+          "done": false
+        },
+        {
+          "id": "floor",
+          "label": "Dammsug och torka golv",
+          "done": false
+        }
+      ]
+    }
+  ]
+}
